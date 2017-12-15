@@ -1,23 +1,26 @@
+
 const express = require('express');
 const app = express();
+const compression = require('compression');
+
+app.use(compression());
+
+if (process.env.NODE_ENV != 'production') {
+    app.use('/bundle.js', require('http-proxy-middleware')({
+        target: 'http://localhost:8081/'
+    }));
+}
+
+app.use(express.static('./public'));
 
 
 
-app.use('/public' , express.static(__dirname + '/public'));
 
-
-
-app.get('/home-page/')
-
-app.get('/welcome/', (req, res) => {
-
-})
 
 app.get('*', function(req, res){
-
+    res.sendFile(__dirname + '/index.html');
 });
 
-//=========================Listening
-server.listen(8080, function() {
-    console.log('listening on port 8080');
-})
+app.listen(8080, function() {
+    console.log("I'm listening.")
+});

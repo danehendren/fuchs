@@ -1,25 +1,31 @@
 import React from 'react';
-import axios from './axios';
+import axios from 'axios';
 import { Link } from 'react-router';
 import About from './about';
+// import Portfolio from './portfolio';
+import Navi from './navi';
 import Portfolio from './portfolio';
 
 export default class Home extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+    // constructor(props) {
+    //     super(props)
+    // }
 
 
 
-    componentDidMount() {
-
-    }
+    // componentDidMount() {
+    //     axios.get('/home-page')
+    //         .then( () => console.log('home page component did mount'))
+    //
+    // }
 
     render() {
-
+        console.log('what the shit are you doing this.props: ', this.props);
         return(
-            <h1>THIS IS THE HOME PAGE, HOORAY!</h1>
+            <div>
+                <Navi />
+                {this.props.children}
+            </div>
         )
     }
-
 }
