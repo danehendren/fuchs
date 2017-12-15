@@ -7,6 +7,8 @@ app.use('/public' , express.static(__dirname + '/public'));
 
 
 
+app.get('/home-page/')
+
 app.get('/welcome/', (req, res) => {
 
 })
