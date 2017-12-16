@@ -7,7 +7,13 @@ export default class Portfolio extends React.Component {
         return (
             <div>
                 <h1>THIS IS PORTTTTTT</h1>
-                {/* <a><img src="/images/catkisscir.png"/></a> */}
+
+                <a><img src="" className="portfolio-image"/></a>
+                <a><img src="" className="portfolio-image"/></a>
+                <a><img src="" className="portfolio-image"/></a>
+                <a><img src="" className="portfolio-image"/></a>
+                <a><img src="" className="portfolio-image"/></a>
+                <a><img src="" className="portfolio-image"/></a>
 
             </div>
         )

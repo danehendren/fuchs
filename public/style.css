@@ -26,3 +26,13 @@
     height: 100px;
     width: 100px;
 }
+.welcome-page-main-image {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.prince-image {
+    height: 1200px;
+    width: 1200px;
+}
