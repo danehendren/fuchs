@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import About from './about';
 import Portfolio from './portfolio';
 import Welcome from './welcome';
+import Home from './home';
 
 
 
@@ -22,7 +23,7 @@ export default function Navi(){
                 </div>
 
                 <div className="nav-bar-bottom">
-                    <h3 className="nav-bar-font">Home</h3>
+                    <Link to="/home" className="nav-bar-font">Home</Link>
                     <Link to="/about" className="nav-bar-font">About</Link>
                     <Link to="/portfolio" className="nav-bar-font">Portfolio</Link>
                     <h3 className="nav-bar-font">Store</h3>
