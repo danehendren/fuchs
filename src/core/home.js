@@ -5,6 +5,7 @@ import About from './about';
 // import Portfolio from './portfolio';
 import Navi from './navi';
 import Portfolio from './portfolio';
+import Contact from './contact'
 
 export default class Home extends React.Component {
     // constructor(props) {
@@ -25,6 +26,7 @@ export default class Home extends React.Component {
             <div>
                 <Navi />
                 {this.props.children}
+                <Contact />
             </div>
         )
     }

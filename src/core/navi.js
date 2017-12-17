@@ -26,7 +26,7 @@ export default function Navi(){
                     <Link to="/home" className="nav-bar-font">Home</Link>
                     <Link to="/about" className="nav-bar-font">About</Link>
                     <Link to="/portfolio" className="nav-bar-font">Portfolio</Link>
-                    <h3 className="nav-bar-font">Store</h3>
+                    <Link to="/shop" className="nav-bar-font">Shop</Link>
                 </div>
             </div>
         )

@@ -5,6 +5,7 @@ import Home from './home';
 import About from './about';
 import Portfolio from './portfolio';
 import Welcome from './welcome';
+import Shop from '../cart/shop';
 
 // import { createStore, applyMiddleware } from 'redux';
 // import reducer from './reducers';
@@ -21,13 +22,10 @@ let mainRouter;
     <Router history={browserHistory}>
         <Route path="/" component={Home}>
             <IndexRoute component={Welcome} />
-                <Route path="/portfolio" component={Portfolio}>
-                <Route path="/about" component={About}>
+                <Route path="/portfolio" component={Portfolio} />
+                <Route path="/about" component={About} />
+                <Route path="/shop" component={Shop} />
                 </Route>
-                </Route>
-            {/* <Route path="/login" component={Login} />
-            <IndexRoute component={Register} /> */}
-  	    </Route>
     </Router>
 );
 //
