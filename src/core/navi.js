@@ -17,8 +17,8 @@ export default function Navi(){
         return(
             <div>
                 <div className="nav-bar-top">
-                    <img src="/images/cart.svg" className="nav-bar-logo"/>
-                    <a><img src="/images/catkisscir.png" className="nav-bar-logo"/></a>
+                    <img src="/images/cart.svg" className="nav-bar-cart"/>
+                    <a><img src="/images/ira-logo.jpg" className="nav-bar-logo"/></a>
                     <p className="nav-bar-font">Language Feature</p>
                 </div>
 

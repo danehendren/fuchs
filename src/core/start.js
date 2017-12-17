@@ -6,6 +6,7 @@ import About from './about';
 import Portfolio from './portfolio';
 import Welcome from './welcome';
 import Shop from '../cart/shop';
+// import Testcontact from './testcontact';
 
 // import { createStore, applyMiddleware } from 'redux';
 // import reducer from './reducers';

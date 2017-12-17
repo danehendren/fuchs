@@ -32,8 +32,17 @@ button {
     font-weight: lighter;
 }
 .nav-bar-logo {
-    height: 100px;
-    width: 100px;
+    width: auto;
+    height: auto;
+    max-height: 200px;
+    max-width: 200px;
+}
+.nav-bar-cart {
+    width: auto;
+    height: auto;
+    max-width: 50px;
+    max-height: 50px;
+    padding-bottom: 20px;
 }
 .welcome-page-main-image {
 
@@ -42,8 +51,10 @@ button {
     justify-content: space-around;
 }
 .prince-image {
-    height: 1200px;
-    width: 1200px;
+    max-width: 800px;
+    max-height: 800px;
+    height: auto;
+    width: auto;
 }
 .portfolio-image {
     /*display: flex;
@@ -58,6 +69,51 @@ button {
 
     flex-flow: row wrap;
     justify-content: space-around;
+}
+.shop-image {
+    width: auto;
+    max-width: 250px;
+    height: auto;
+    max-height: 500px;
+}
+.shop-container {
+    display: flex;
+
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.about-page-main-image-container {
+    display: flex;
+    justify-content: center;
+    
+}
+.about-page-main-image {
+
+    max-width: 500px;
+    max-height: 500px;
+    height: auto;
+    width: auto;
+}
+.about-me-container {
+    display: flex;
+    justify-content: center;
+}
+.about-me-border {
+    display: flex;
+    align-items: flex-start;
+    max-width: 800px;
+    border: 2px black solid;
+    padding: 20px 20px 20px 20px;
+    line-height: 40px;
+}
+.about-me-image {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    padding-right: 20px;
+    top: 40px;
+
 }
 .contact-form-wrapper {
     float: right;

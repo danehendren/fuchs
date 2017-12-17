@@ -6,12 +6,13 @@ export default class Portfolio extends React.Component {
     render() {
         return (
             <div>
-                <h1>Here you will find a catalogue of my work throughout my studies</h1>
+
 
                 <div className="portfolio-container">
 
+
                     <div className="img__wrap">
-                      <a><img className="img__img" src="/portfolio/alicexmas.jpg" className="portfolio-image"/></a>
+                      <a><img className="img__img" src="/portfolio/alicexmas.jpg" className="portfolio-image" /></a>
                       <div className="img__description_layer">
                         <p className="img__description">This image looks super neat.</p>
                       </div>
