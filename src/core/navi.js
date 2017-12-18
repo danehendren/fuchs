@@ -14,13 +14,28 @@ export default function Navi(){
 
 
 
+
         return(
             <div>
                 <div className="nav-bar-top">
                     <img src="/images/cart.svg" className="nav-bar-cart"/>
                     <a><img src="/images/ira-logo.jpg" className="nav-bar-logo"/></a>
-                    <p className="nav-bar-font">Language Feature</p>
+
+                    <ul className="languagepicker" >
+                        <a href="#en"><li><img src="http://i64.tinypic.com/fd60km.png"/>English</li></a>
+                        <a href="#de"><li><img src="http://i63.tinypic.com/10zmzyb.png"/>Deutsch</li></a>
+                    </ul>
+
+
                 </div>
+
+
+
+
+
+
+
+
 
                 <div className="nav-bar-bottom">
                     <Link to="/home" className="nav-bar-font">Home</Link>

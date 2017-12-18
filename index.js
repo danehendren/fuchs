@@ -1,7 +1,7 @@
-
 const express = require('express');
 const app = express();
 const compression = require('compression');
+const db = require('./modules/db');
 
 
 app.use(compression());
@@ -13,6 +13,26 @@ if (process.env.NODE_ENV != 'production') {
 }
 
 app.use(express.static('./public'));
+
+
+
+
+
+app.get('/get-shop-products/', (req, res) => {
+
+    db.getShopProducts()
+        .then( (data) => {
+            res.json({
+                success: true,
+                shopProducts: data
+            })
+            console.log('inside the index.js', data);
+        })
+        .catch(err => console.log("ERROR HAPPENING IN INDEX.JS",err))
+
+
+})
+//don't forget to name key value shopProducts: data rather than data: data
 
 
 

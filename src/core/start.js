@@ -6,29 +6,58 @@ import About from './about';
 import Portfolio from './portfolio';
 import Welcome from './welcome';
 import Shop from '../cart/shop';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import reduxPromise from 'redux-promise';
+import { Provider } from 'react-redux';
+
+
+
 // import Testcontact from './testcontact';
 
-// import { createStore, applyMiddleware } from 'redux';
-// import reducer from './reducers';
+import { createStore, applyMiddleware } from 'redux';
+import reducer from '../reducers';
 
 
 
-// const store = createStore(reducer,
-// composeWithDevTools(applyMiddleware(reduxPromise)))
+const store = createStore(reducer,
+composeWithDevTools(applyMiddleware(reduxPromise)))
 
 
 let mainRouter;
 
  mainRouter = (
-    <Router history={browserHistory}>
-        <Route path="/" component={Home}>
-            <IndexRoute component={Welcome} />
-                <Route path="/portfolio" component={Portfolio} />
-                <Route path="/about" component={About} />
-                <Route path="/shop" component={Shop} />
-                </Route>
-    </Router>
+     <Provider store={store}>
+        <Router history={browserHistory}>
+            <Route path="/" component={Home}>
+                <IndexRoute component={Welcome} />
+                    <Route path="/portfolio" component={Portfolio} />
+                    <Route path="/about" component={About} />
+                    <Route path="/shop" component={Shop} />
+                    </Route>
+        </Router>
+    </Provider>
 );
+
+//
+// const germanRouter = (
+//     <Router history={browserHistory}>
+//         <Route path="/" component={zuHause}>
+//             <IndexRoute component={Willkommen} />
+//                 <Route path="/portfolio" component={GermanPortfolio} />
+//                 <Route path="/about" component={Uber} />
+//                 <Route path="/shop" component={Laden} />
+//         </Route>
+//
+//     </Router>
+// )
+//
+// if (location.pathname === '/en/') {
+//     router = mainRouter
+// } else {
+//     router = germanRouter
+// }
+
+
 //
 //
 // if (location.pathname === '/home/') {
