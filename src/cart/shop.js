@@ -9,27 +9,28 @@ import { getShopProducts } from '../actions';
          super(props)
      }
 
-    // componentDidMount() {
-    //     this.props.getShopProducts()
-    // }
+    componentDidMount() {
+        this.props.getShopProducts()
+    }
 
 
     render() {
-
         if(!this.props.shopProducts) {
             return null;
-        } else {
-
-            const newShopProducts = this.props.shopProducts.map(mappedProducts => {
-                <div>
-                    {/* <h1>{mappedProducts.title}</h1> */}
-                </div>
-            })
         }
 
+        const newShopProducts = this.props.shopProducts.map(product => {
+            console.log('RENDER shop.js ', product);
+
+            return (
+                <div>
+                    <h1>{product.title}</h1>
+                </div>
+            )
+        })
         return (
             <div>
-                {/* <h1>{ newShopProducts.title }</h1> */}
+                <h1>{ newShopProducts }</h1>
                 <div className="shop-container">
                     <div>
                         <a><img src="/portfolio/tigerxmas.jpg" className="shop-image" /></a>
@@ -47,7 +48,7 @@ import { getShopProducts } from '../actions';
 }
 
 const mapStateToProps = function(state) {
-    console.log('running map state to props in GUYS', state);
+    console.log('shop.js mapStateToProps state: ', state);
     return {
         shopProducts: state.shopProducts
     }

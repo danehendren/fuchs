@@ -21,7 +21,6 @@ export default class Home extends React.Component {
     // }
 
     render() {
-        console.log('what the shit are you doing this.props: ', this.props);
         return(
             <div>
                 <Navi />
