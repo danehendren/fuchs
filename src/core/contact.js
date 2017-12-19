@@ -7,7 +7,6 @@ export default class Contact extends React.Component {
         return (
             <div>
                 <div className="contact-form-wrapper">
-                    <h1>Contact</h1>
                     <div className="contact-form-container">
                         <textarea placeholder="Name"></textarea>
                         <textarea placeholder="E-Mail"></textarea>

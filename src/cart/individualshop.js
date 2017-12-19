@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { getIndividualProduct } from '../actions'
+import { Link } from 'react-router';
+
 
  class Individualshop extends React.Component {
     constructor(props) {
@@ -27,8 +29,12 @@ import { getIndividualProduct } from '../actions'
         return (
             <div className="shop-product-container">
                 <img src={ product.photo } className="shop-product-image"/>
-                <h3>Artwork Title: {product.title}</h3>
-                <p>Price: {product.price}</p>
+                <div className="shop-product-info-container">
+                    <h3> {product.title}</h3>
+                    <p>Price: {product.price}</p>
+                    <Link to="/shop" className="nav-bar-font">Back to Shop! </Link>
+                    <h3>Add to Cart</h3>
+                </div>
             </div>
         )
     }

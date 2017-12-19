@@ -14,7 +14,7 @@ import { Link } from 'react-router';
         this.props.getShopProducts()
     }
 
-    
+
 
 
     render() {
@@ -27,6 +27,9 @@ import { Link } from 'react-router';
                 <div>
 
                     <Link to={`/individualshop/${product.id}`}> <img src={product.photo} className="shop-image"/></Link>
+
+
+
 
                 </div>
             )

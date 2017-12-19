@@ -17,13 +17,15 @@ export default function Navi(){
 
         return(
             <div>
+                {/* <div className="christmasLights"></div> */}
+
                 <div className="nav-bar-top">
                     <img src="/images/cart.svg" className="nav-bar-cart"/>
                     <a><img src="/images/ira-logo.jpg" className="nav-bar-logo"/></a>
 
                     <ul className="languagepicker" >
-                        <a href="#en"><li><img src="http://i64.tinypic.com/fd60km.png"/>English</li></a>
-                        <a href="#de"><li><img src="http://i63.tinypic.com/10zmzyb.png"/>Deutsch</li></a>
+                        <a href="#en"><li className="language">English</li></a>
+                        <a href="#de"><li className="language">Deutsch</li></a>
                     </ul>
 
 
@@ -38,11 +40,14 @@ export default function Navi(){
 
 
                 <div className="nav-bar-bottom">
-                    <Link to="/home" className="nav-bar-font">Home</Link>
-                    <Link to="/about" className="nav-bar-font">About</Link>
-                    <Link to="/portfolio" className="nav-bar-font">Portfolio</Link>
-                    <Link to="/shop" className="nav-bar-font">Shop</Link>
+                    <Link to="/" className="nav-bar-font">home</Link>
+                    <Link to="/about" className="nav-bar-font">about</Link>
+                    <Link to="/portfolio" className="nav-bar-font">portfolio</Link>
+                    <Link to="/shop" className="nav-bar-font">shop</Link>
                 </div>
+
+
+
             </div>
         )
 
