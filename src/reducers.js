@@ -8,6 +8,10 @@ export default function(state = defaultState, action) {
         state = Object.assign( {}, state, { shopProducts: action.shopProducts })
 
     }
-    console.log('reducers.js GET_SHOP_PRODUCTS State: ', state);
+    // console.log('reducers.js GET_SHOP_PRODUCTS State: ', state);
+    if(action.type == "GET_INDIVIDUAL_PRODUCT") {
+        state = Object.assign( {}, state, { individualProduct: action.individualProduct})
+    }
+    console.log('ABOUT TO RETURN THAT STATE IN REDUCERS', state);
     return state;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { getShopProducts } from '../actions';
+import { Link } from 'react-router';
 
 
  class Shop extends React.Component {
@@ -13,9 +14,7 @@ import { getShopProducts } from '../actions';
         this.props.getShopProducts()
     }
 
-    // singleProduct() {
-    //
-    // }
+    
 
 
     render() {
@@ -27,8 +26,8 @@ import { getShopProducts } from '../actions';
             return (
                 <div>
 
-                    <a><img src={product.photo} className="shop-image"/></a>
-                    
+                    <Link to={`/individualshop/${product.id}`}> <img src={product.photo} className="shop-image"/></Link>
+
                 </div>
             )
         })

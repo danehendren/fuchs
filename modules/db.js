@@ -17,6 +17,14 @@ exports.getShopProducts = function() {
     // const params = [ ]
         return db.query( q )
             .then(( data ) => { return data.rows })
-            
+}
 
+
+exports.getIndividualProduct = function(id) {
+    const  q = `SELECT * FROM shopItems WHERE id = $1`
+    const params = [ id ]
+    // console.log('db.js getIndividualProduct function', id);
+        return db.query( q, params )
+            .then(( data ) => { return data.rows })
+            .catch(err => console.log('inside err of getIndividualProduct', err))
 }

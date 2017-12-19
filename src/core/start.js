@@ -9,7 +9,7 @@ import Shop from '../cart/shop';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import reduxPromise from 'redux-promise';
 import { Provider } from 'react-redux';
-import Individualshop from '../cart/shop';
+import Individualshop from '../cart/individualshop';
 
 
 
@@ -34,7 +34,10 @@ let mainRouter;
                     <Route path="/portfolio" component={Portfolio} />
                     <Route path="/about" component={About} />
                     <Route path="/shop" component={Shop} />
-                    </Route>
+                    <Route path="/individualshop/:id" component={Individualshop} />
+
+            </Route>
+
         </Router>
     </Provider>
 );

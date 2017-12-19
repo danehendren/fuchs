@@ -84,6 +84,19 @@ button {
     flex-flow: row wrap;
     justify-content: space-around;
 }
+.shop-product-image {
+    height: auto;
+    width: auto;
+    max-width: 500px;
+    max-height: 500px;
+}
+.shop-product-container {
+    border: 2px black solid;
+    border-width: thin;
+    border-image-width: auto;
+    display: flex;
+    justify-content: center;
+}
 /*.shop-container-big {
     display: flex;
     flex-flow: row wrap;

@@ -28,10 +28,25 @@ app.get('/get-shop-products/', (req, res) => {
             })
             console.log('inside the index.js', data);
         })
-        .catch(err => console.log("ERROR HAPPENING IN INDEX.JS",err))
-
-
+        .catch(err => console.log("Err in Shop Products Get request index.js",err))
 })
+
+app.get('/individual-shop-product/:id', (req, res) => {
+    console.log('index.js individual-shop-product ');
+    db.getIndividualProduct(req.params.id)
+        .then( (data) => {
+            res.json({
+                success: true,
+                individualProduct: data
+            })
+            console.log('inside the index.js INDIVIDUAL PRODUCT', data);
+        })
+        .catch(err => console.log("Err in Individual Shop Get Request index.js",err))
+})
+
+
+
+
 //don't forget to name key value shopProducts: data rather than data: data
 
 
