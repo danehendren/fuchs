@@ -9,6 +9,7 @@ import Shop from '../cart/shop';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import reduxPromise from 'redux-promise';
 import { Provider } from 'react-redux';
+import Individualshop from '../cart/shop';
 
 
 

@@ -1,5 +1,5 @@
 * {
-    background-color: white;
+    /*background-color: white;*/
 }
 /*bebas_neueregular, Arial, Helvetica, sans-serif;*/
 h1 {
@@ -76,13 +76,19 @@ button {
     max-width: 250px;
     height: auto;
     max-height: 500px;
+    /*display: flex;
+    flex-flow: row wrap;*/
 }
 .shop-container {
     display: flex;
-
     flex-flow: row wrap;
     justify-content: space-around;
 }
+/*.shop-container-big {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}*/
 .about-page-main-image-container {
     display: flex;
     justify-content: center;
@@ -142,12 +148,15 @@ html {
   font-family: helvetica, arial, sans-serif;
 }*/
 
-/* relevant styles */
+/* portfolio lightbox css styling */
 .img__wrap {
   position: relative;
   height: 360px;
   width: 250px;
 }
+/*.portfolio-text {
+    background: rgba(1, 50, 300) ;
+}*/
 
 .img__description_layer {
   position: absolute;
@@ -155,13 +164,15 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(36, 62, 206, 0.6);
-  color: black;
+  background: rgba(1, 50, 300, 0.7);
+  color: #e5e3e3;
+
   visibility: hidden;
   opacity: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
 
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;

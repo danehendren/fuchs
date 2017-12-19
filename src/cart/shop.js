@@ -13,6 +13,10 @@ import { getShopProducts } from '../actions';
         this.props.getShopProducts()
     }
 
+    // singleProduct() {
+    //
+    // }
+
 
     render() {
         if(!this.props.shopProducts) {
@@ -20,35 +24,24 @@ import { getShopProducts } from '../actions';
         }
 
         const newShopProducts = this.props.shopProducts.map(product => {
-            console.log('RENDER shop.js ', product);
-
             return (
                 <div>
-                    <h1>{product.title}</h1>
+
+                    <a><img src={product.photo} className="shop-image"/></a>
+                    
                 </div>
             )
         })
         return (
-            <div>
-                <h1>{ newShopProducts }</h1>
-                <div className="shop-container">
-                    <div>
-                        <a><img src="/portfolio/tigerxmas.jpg" className="shop-image" /></a>
-                        <a><img src="/portfolio/alicexmas.jpg" className="shop-image" /></a>
-                        <a><img src="/portfolio/panxmas.jpg" className="shop-image" /></a>
-                        <a><img src="/portfolio/xmastreecat.jpg" className="shop-image" /></a>
-                        <a><img src="/portfolio/evilsanta.jpg" className="shop-image"/></a>
-                    </div>
-
-                </div>
-
+            <div className="shop-container">
+                { newShopProducts }
             </div>
         )
     }
 }
 
 const mapStateToProps = function(state) {
-    console.log('shop.js mapStateToProps state: ', state);
+    // console.log('shop.js mapStateToProps state: ', state);
     return {
         shopProducts: state.shopProducts
     }
@@ -62,7 +55,3 @@ const mapDispatchToProps = (dispatch) => ({
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Shop)
-//move the axios stuff into an action (that which is in componentDidMount)
-//set up map state to props
-//uncomment 37 and export it that way rather than the Class like above.
-//dispatch the action in componentDidMount with mapdispatch to props or without it.
