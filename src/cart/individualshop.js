@@ -32,8 +32,10 @@ import { Link } from 'react-router';
                 <div className="shop-product-info-container">
                     <h3> {product.title}</h3>
                     <p>Price: {product.price}</p>
-                    <Link to="/shop" className="nav-bar-font">Back to Shop! </Link>
-                    <button onClick={ () => this.props.addToCart(product)}>Add to Cart</button>
+                    <Link to="/shop" className="back-to-shop-style">Back to Shop!</Link>
+                    <div className="button-cart">
+                        <button onClick={ () => this.props.addToCart(product)}>Add to Cart</button>
+                    </div>
                 </div>
             </div>
         )
@@ -43,9 +45,10 @@ import { Link } from 'react-router';
 // this.props.addToCart(product)
 
 const mapStateToProps = function(state) {
-    // console.log('inside mapStateToProps of individualshop.js', state);
+    console.log('inside mapStateToProps of individualshop.js', state);
     return {
-        individualProduct: state.individualProduct
+        individualProduct: state.individualProduct,
+        total: state.cart.total
     }
 };
 

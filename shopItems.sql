@@ -5,5 +5,5 @@ CREATE TABLE shopItems(
     title VARCHAR(200),
     photo VARCHAR(300),
     type VARCHAR(200),
-    price VARCHAR(100)
+    price NUMERIC(5,2)
 );

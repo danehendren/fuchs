@@ -10,6 +10,10 @@ textarea {
 }
 button {
     font-family: Helvetica;
+    /*padding-top: 10px;*/
+}
+.button-cart {
+    padding-top: 20px;
 }
 h3 {
     font-family: Helvetica;
@@ -64,6 +68,15 @@ p{
     font-weight: 900;
     text-decoration: none;
     font-weight: 500;
+}
+.back-to-shop-style {
+    font-family: Helvetica;
+    letter-spacing: 7px;
+    font-size: 17px;
+    font-weight: 900;
+    text-decoration: none;
+    font-weight: 500;
+    text-decoration: underline;
 }
 .nav-bar-logo {
     width: auto;

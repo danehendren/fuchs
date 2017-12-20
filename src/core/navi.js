@@ -5,19 +5,21 @@ import About from './about';
 import Portfolio from './portfolio';
 import Welcome from './welcome';
 import Home from './home';
+import { connect } from 'react-redux';
 
 
 
 
-export default function Navi(){
+ function Navi(props){
 
-
+// const cartTotal = this.props.total
         return(
             <div>
                 {/* <div className="christmasLights"></div> */}
 
                 <div className="nav-bar-top">
                     <img src="/images/cart.svg" className="nav-bar-cart"/>
+                    <div>{props.total}</div>
                     <a><img src="/images/ira-logo.jpg" className="nav-bar-logo"/></a>
 
                     <ul className="languagepicker" >
@@ -49,5 +51,18 @@ export default function Navi(){
         )
 
 }
+
+const mapStateToProps = function(state) {
+    console.log('navi component', state);
+    return {
+        total: state.cart.total
+    }
+};
+
+
+
+
+
 //need Link to for each different page.
 //check on how to do the drop down language in a cleaner way.
+export default connect(mapStateToProps)(Navi)
