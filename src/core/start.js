@@ -10,19 +10,14 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reduxPromise from 'redux-promise';
 import { Provider } from 'react-redux';
 import Individualshop from '../cart/individualshop';
-
-
-
+import Uber from '../de/uber.js';
 // import Testcontact from './testcontact';
 
 import { createStore, applyMiddleware } from 'redux';
 import reducer from '../reducers';
 
-
-
 const store = createStore(reducer,
 composeWithDevTools(applyMiddleware(reduxPromise)))
-
 
 let mainRouter;
 
@@ -35,9 +30,9 @@ let mainRouter;
                     <Route path="/about" component={About} />
                     <Route path="/shop" component={Shop} />
                     <Route path="/individualshop/:id" component={Individualshop} />
+                    <Route path="/uber" component={Uber} />
 
             </Route>
-
         </Router>
     </Provider>
 );
@@ -73,8 +68,7 @@ let mainRouter;
 // }
 //
 // export default store
-//
-//
+
 ReactDOM.render( mainRouter, document.querySelector('main'));
 
 

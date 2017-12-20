@@ -32,7 +32,7 @@ app.get('/get-shop-products/', (req, res) => {
 })
 
 app.get('/individual-shop-product/:id', (req, res) => {
-    console.log('index.js individual-shop-product ');
+    // console.log('index.js individual-shop-product ');
     db.getIndividualProduct(req.params.id)
         .then( (data) => {
             res.json({
@@ -44,7 +44,9 @@ app.get('/individual-shop-product/:id', (req, res) => {
         .catch(err => console.log("Err in Individual Shop Get Request index.js",err))
 })
 
-
+app.get('/add-to-cart', (req, res) => {
+    
+})
 
 
 //don't forget to name key value shopProducts: data rather than data: data

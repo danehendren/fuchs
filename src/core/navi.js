@@ -8,11 +8,8 @@ import Home from './home';
 
 
 
+
 export default function Navi(){
-
-
-
-
 
 
         return(
@@ -24,8 +21,8 @@ export default function Navi(){
                     <a><img src="/images/ira-logo.jpg" className="nav-bar-logo"/></a>
 
                     <ul className="languagepicker" >
-                        <a href="#en"><li className="language">English</li></a>
-                        <a href="#de"><li className="language">Deutsch</li></a>
+                        <Link to="/about"><li className="language">English</li></Link>
+                        <Link to="/uber"><li className="language">Deutsch</li></Link>
                     </ul>
 
 

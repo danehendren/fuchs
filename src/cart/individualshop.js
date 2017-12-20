@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { getIndividualProduct } from '../actions'
+import { getIndividualProduct, addToCart } from '../actions'
 import { Link } from 'react-router';
 
 
@@ -24,7 +24,7 @@ import { Link } from 'react-router';
             return null;
         }
         const product = this.props.individualProduct[0]
-        console.log('Individualshop render() function this.prpos:', product);
+        // console.log('Individualshop render() function this.prpos:', product);
 
         return (
             <div className="shop-product-container">
@@ -33,12 +33,14 @@ import { Link } from 'react-router';
                     <h3> {product.title}</h3>
                     <p>Price: {product.price}</p>
                     <Link to="/shop" className="nav-bar-font">Back to Shop! </Link>
-                    <h3>Add to Cart</h3>
+                    <button onClick={ () => this.props.addToCart(product)}>Add to Cart</button>
                 </div>
             </div>
         )
     }
 }
+
+// this.props.addToCart(product)
 
 const mapStateToProps = function(state) {
     // console.log('inside mapStateToProps of individualshop.js', state);
@@ -50,6 +52,7 @@ const mapStateToProps = function(state) {
 const mapDispatchToProps = (dispatch) => ({
 
     getIndividualProduct: (id) => dispatch(getIndividualProduct(id)),
+    addToCart: (product) => dispatch(addToCart(product))
 
 })
 

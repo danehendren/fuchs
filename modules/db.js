@@ -14,7 +14,6 @@ if (process.env.DATABASE_URL) {
 exports.getShopProducts = function() {
 
     const  q = `SELECT * FROM shopItems`
-    // const params = [ ]
         return db.query( q )
             .then(( data ) => { return data.rows })
 }
