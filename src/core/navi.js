@@ -18,8 +18,11 @@ import { connect } from 'react-redux';
                 {/* <div className="christmasLights"></div> */}
 
                 <div className="nav-bar-top">
-                    <img src="/images/cart.svg" className="nav-bar-cart"/>
-                    <div>{props.total}</div>
+                    <div className="cart-price-container">
+                        {/* <img src="/images/cart.svg" className="nav-bar-cart"/> */}
+                        <p className="cart-font"> Your Total: € </p>
+                        <div className="cart-price">{props.total},00</div>
+                    </div>
                     <a><img src="/images/ira-logo.jpg" className="nav-bar-logo"/></a>
 
                     <ul className="languagepicker" >

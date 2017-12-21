@@ -27,7 +27,7 @@ import { Link } from 'react-router';
                 <div>
 
                     <Link to={`/individualshop/${product.id}`}> <img src={product.photo} className="shop-image"/></Link>
-
+                    
                 </div>
             )
         })

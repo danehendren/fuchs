@@ -31,10 +31,10 @@ import { Link } from 'react-router';
                 <img src={ product.photo } className="shop-product-image"/>
                 <div className="shop-product-info-container">
                     <h3> {product.title}</h3>
-                    <p>Price: {product.price}</p>
-                    <Link to="/shop" className="back-to-shop-style">Back to Shop!</Link>
+                    <p>Price: €{product.price}</p>
+                    <Link to="/shop" className="back-to-shop-style">back to shop!</Link>
                     <div className="button-cart">
-                        <button onClick={ () => this.props.addToCart(product)}>Add to Cart</button>
+                        <button onClick={ () => this.props.addToCart(product)} className="add-to-cart-button"><span>add to cart</span></button>
                     </div>
                 </div>
             </div>
