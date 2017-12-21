@@ -26,6 +26,9 @@ import { Link } from 'react-router';
         const product = this.props.individualProduct[0]
         // console.log('Individualshop render() function this.prpos:', product);
 
+        
+
+
         return (
             <div className="shop-product-container">
                 <img src={ product.photo } className="shop-product-image"/>
@@ -36,6 +39,7 @@ import { Link } from 'react-router';
                     <div className="button-cart">
                         <button onClick={ () => this.props.addToCart(product)} className="add-to-cart-button"><span>add to cart</span></button>
                     </div>
+
                 </div>
             </div>
         )

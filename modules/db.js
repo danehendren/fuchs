@@ -1,5 +1,4 @@
 const spicedPg = require("spiced-pg");
-const config = require('../config.json')
 
 if (process.env.DATABASE_URL) {
     db = process.env.DATABASE_URL
@@ -7,7 +6,7 @@ if (process.env.DATABASE_URL) {
     var info = require('../secrets.json')
     var user = info.username;
     var pass = info.password;
-    db = spicedPg(`postgres:${user}:${pass}psql@localhost:5432/derillufuchs`);
+    db = spicedPg(`postgres:${user}:${pass}psql@localhost:5432/shop`);
 }
 
 

@@ -4,18 +4,6 @@ const compression = require('compression');
 const db = require('./modules/db');
 
 
-
-
-if (process.env.DATABASE_URL) {
-    dbURL = process.env.DATABASE_URL
-} else {
-    var info = require('./secrets.json')
-    var user = info.username;
-    var pass = info.password;
-    dbURL = `postgres:${user}:${pass}psql@localhost:5432/derillufuchs`
-}
-
-
 app.use(compression());
 
 if (process.env.NODE_ENV != 'production') {
@@ -27,9 +15,6 @@ if (process.env.NODE_ENV != 'production') {
 app.use(express.static('./public'));
 
 
-
-
-
 app.get('/get-shop-products/', (req, res) => {
 
     db.getShopProducts()
@@ -38,7 +23,7 @@ app.get('/get-shop-products/', (req, res) => {
                 success: true,
                 shopProducts: data
             })
-            console.log('inside the index.js', data);
+            // console.log('inside the index.js', data);
         })
         .catch(err => console.log("Err in Shop Products Get request index.js",err))
 })
@@ -61,14 +46,10 @@ app.get('/individual-shop-product/:id', (req, res) => {
 //don't forget to name key value shopProducts: data rather than data: data
 
 
-
-
-
 app.get('*', function(req, res){
     res.sendFile(__dirname + '/public/index.html');
 });
-app.listen(process.env.PORT || 8080);
 
-// app.listen(8080, function() {
-//     console.log("I'm listening.")
-// });
+app.listen(8080, function() {
+    console.log("I'm listening.")
+});

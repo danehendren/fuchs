@@ -87,7 +87,7 @@ p{
     font-weight: 500;
 }
 
-.back-to-shop-style:hover{ background-color: #7ACD7E;}
+.back-to-shop-style:hover{ background-color: #ACDFAD;}
 
 .back-to-shop-style:active {
     background-color: #611010;
@@ -96,15 +96,6 @@ p{
     transform: translateY(4px);
 
 }
-
-
-
-
-
-
-
-
-
 .back-to-shop-style {
     /*font-family: Helvetica;
     letter-spacing: 7px;
@@ -201,7 +192,7 @@ p{
     font-family: sans-serif;
 }
 
-.add-to-cart-button:hover{ background-color: #FE887E;}
+.add-to-cart-button:hover{ background-color: #FBCEC3;}
 .add-to-cart-button:hover span {
     /*padding-right: 16px;*/
 }
