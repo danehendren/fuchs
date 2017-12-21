@@ -1,4 +1,5 @@
 const spicedPg = require("spiced-pg");
+const config = require('../config.json')
 
 if (process.env.DATABASE_URL) {
     db = process.env.DATABASE_URL
