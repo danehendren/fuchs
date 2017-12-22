@@ -11,6 +11,8 @@ import reduxPromise from 'redux-promise';
 import { Provider } from 'react-redux';
 import Individualshop from '../cart/individualshop';
 import Uber from '../de/uber.js';
+import Checkout from '../cart/checkout';
+
 // import Testcontact from './testcontact';
 
 import { createStore, applyMiddleware } from 'redux';
@@ -31,6 +33,7 @@ let mainRouter;
                     <Route path="/shop" component={Shop} />
                     <Route path="/individualshop/:id" component={Individualshop} />
                     <Route path="/uber" component={Uber} />
+                    <Route path="/checkout" component={Checkout} />
 
             </Route>
         </Router>

@@ -11,25 +11,26 @@ import { connect } from 'react-redux';
 
 
  function Navi(props){
-    //  function refreshPage() {
-     //
-    //     //  props.total = 0;
-    //     //  console.log('TOTAL COST HERE?', props.total);
-    //      window.location.reload();
-    //  }
+     function refreshPage() {
+
+        //  props.total = 0;
+        //  console.log('TOTAL COST HERE?', props.total);
+         window.location.reload();
+     }
 
 // const cartTotal = this.props.total
         return(
             <div>
-                <div className="christmasLights"></div>
+                {/* <div className="christmasLights"></div> */}
 
                 <div className="nav-bar-top">
                     <div className="cart-price-container">
                         {/* <img src="/images/cart.svg" className="nav-bar-cart"/> */}
-                        <p className="cart-font"> Your Total: € </p>
+                        {/* <p className="cart-font"> Your Total: € </p> */}
+                        <Link to="/checkout" className="cart-font">your total:</Link>
+                        <p>€</p>
                         <div className="cart-price">{props.total},00</div>
-                        {/* <button type="button" onClick={ refreshPage } className="button-cart"> <span>Empty Cart</span> </button> */}
-
+                        <button type="button" onClick={ refreshPage } className="empty-cart-button"> <span>Empty Cart</span> </button>
                     </div>
                     <a><img src="/images/ira-logo.jpg" className="nav-bar-logo"/></a>
 

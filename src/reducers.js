@@ -14,7 +14,7 @@ export default function(state = defaultState, action) {
     if(action.type == "GET_INDIVIDUAL_PRODUCT") {
         state = Object.assign( {}, state, { individualProduct: action.individualProduct})
     }
-    
+
 
 
     // console.log('ABOUT TO RETURN THAT STATE IN REDUCERS', state);
@@ -45,5 +45,6 @@ export default function(state = defaultState, action) {
             // console.log('total', total);
         }
         return total
+        // console.log('THIS IS THE STATE', state);
     }
 }
