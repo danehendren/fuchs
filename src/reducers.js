@@ -33,7 +33,7 @@ export default function(state = defaultState, action) {
             cart: cartCopy
         })
     }
-
+    console.log('THE STATEOOOOOOOOO', state);
     return state;
 
     function calculateTotal(items) {

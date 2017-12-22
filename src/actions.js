@@ -23,7 +23,7 @@ export function getIndividualProduct (id) {
         .catch(err => console.log("err inside of actions.js axios INDIVIDUAL PRODUCT",err))
 }
 export function addToCart(product) {
-    
+        // console.log('Actions.js console log ', product);
     return {
         type: "ADD_TO_CART",
         product

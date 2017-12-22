@@ -24,7 +24,7 @@ import { Link } from 'react-router';
             return null;
         }
         const product = this.props.individualProduct[0]
-        // console.log('Individualshop render() function this.prpos:', product);
+        console.log('Individualshop render() function this.prpos:', product);
 
 
 

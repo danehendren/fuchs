@@ -39,6 +39,7 @@ p{
 }
 .language {
     /*border: 2px solid black;*/
+
 }
 .bogus-contact {
     display: flex;
@@ -62,6 +63,7 @@ p{
     letter-spacing: 3px;
     /*font-size: 15px;*/
     font-weight: 400;
+    cursor: pointer;
 
 }
 .cart-price {

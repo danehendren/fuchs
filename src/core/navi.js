@@ -35,8 +35,8 @@ import { connect } from 'react-redux';
                     <a><img src="/images/ira-logo.jpg" className="nav-bar-logo"/></a>
 
                     <ul className="languagepicker" >
-                        <Link to="/about"><li className="language">English</li></Link>
-                        <Link to="/uber"><li className="language">Deutsch</li></Link>
+                        <Link to="/about"><li className="cart-font">English</li></Link>
+                        <Link to="/uber"><li className="cart-font">Deutsch</li></Link>
                     </ul>
 
 

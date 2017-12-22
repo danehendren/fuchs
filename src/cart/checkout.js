@@ -7,16 +7,25 @@ import { connect } from 'react-redux';
 
 
  function Checkout(props){
-     console.log('CHECKOUT', props.photo);
+    //  console.log('CHECKOUT', props.photo);
     //  const cartTotal = this.props.total
+    // componentDidMount(){
+    //
+    //
+    // }
+
+
+
 
         return(
             <div>
-                
+
                 <div className="shop-product-info-container">
                     <p>your total</p>
                     <div className="checkout-cart-price">{props.total},00</div>
-                    <p>checkout</p>
+                    {/* <img src="{props.items.photo}" /> */}
+                    <p className="cart-font">checkout</p>
+
                     <a><img src="/images/sitfox.jpg" className="about-page-main-image"/></a>
                 </div>
             </div>
@@ -25,9 +34,11 @@ import { connect } from 'react-redux';
 }
 
 const mapStateToProps = function(state) {
-    // console.log('navi component', state);
+    // console.log('navi component9999999999999666666666', state.cart.items);
     return {
-        total: state.cart.total
+        // individualProduct: state.individualProduct,
+        total: state.cart.total,
+        cart: state.cart.items
     }
 };
 
