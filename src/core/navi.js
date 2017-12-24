@@ -21,7 +21,7 @@ import { connect } from 'react-redux';
 // const cartTotal = this.props.total
         return(
             <div>
-                {/* <div className="christmasLights"></div> */}
+                <div className="christmasLights"></div>
 
                 <div className="nav-bar-top">
                     <div className="cart-price-container">
