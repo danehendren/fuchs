@@ -2,17 +2,17 @@ const express = require('express');
 const app = express();
 const compression = require('compression');
 const db = require('./modules/db');
-// var  dbUrl;
+var dbUrl ;
 
 
 
 if (process.env.DATABASE_URL) {
-    dbURL = process.env.DATABASE_URL
+    dbUrl = process.env.DATABASE_URL
 } else {
     var info = require('./secrets.json')
     var user = info.username;
     var pass = info.password;
-    dbURL = `postgres:${user}:${pass}psql@localhost:5432/shopItems`
+    dbUrl = `postgres:${user}:${pass}psql@localhost:5432/shopItems`
 }
 
 
