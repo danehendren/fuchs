@@ -6,7 +6,7 @@ if (process.env.DATABASE_URL) {
     var info = require('../secrets.json')
     var user = info.username;
     var pass = info.password;
-    db = spicedPg(`postgres:${user}:${pass}psql@localhost:5432/shop`);
+    db = spicedPg(`postgres:${user}:${pass}psql@localhost:5432/shopItems`);
 }
 
 

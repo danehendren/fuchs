@@ -2,6 +2,21 @@ const express = require('express');
 const app = express();
 const compression = require('compression');
 const db = require('./modules/db');
+const dbUrl;
+
+
+
+if (process.env.DATABASE_URL) {
+    dbURL = process.env.DATABASE_URL
+} else {
+    var info = require('./secrets.json')
+    var user = info.username;
+    var pass = info.password;
+    dbURL = `postgres:${user}:${pass}psql@localhost:5432/shopItems`
+}
+
+
+
 
 
 app.use(compression());
@@ -50,6 +65,9 @@ app.get('*', function(req, res){
     res.sendFile(__dirname + '/public/index.html');
 });
 
-app.listen(8080, function() {
-    console.log("I'm listening.")
-});
+app.listen(process.env.PORT || 8080, () => {
+    console.log('Der Fuchs is listening on 8080');
+})
+// app.listen(8080, function() {
+//     console.log("I'm listening.")
+// });
