@@ -6,31 +6,32 @@ import Portfolio from './portfolio';
 import Welcome from './welcome';
 import Home from './home';
 import { connect } from 'react-redux';
+import Contact from './contact';
 
 
 
 
  function Navi(props){
-     function refreshPage() {
-
-        //  props.total = 0;
-        //  console.log('TOTAL COST HERE?', props.total);
-         window.location.reload();
-     }
+    //  function refreshPage() {
+     //
+    //     //  props.total = 0;
+    //     //  console.log('TOTAL COST HERE?', props.total);
+    //      window.location.reload();
+    //  }
 
 // const cartTotal = this.props.total
         return(
             <div>
-                <div className="christmasLights"></div>
+                {/* <div className="christmasLights"></div> */}
 
                 <div className="nav-bar-top">
                     <div className="cart-price-container">
                         {/* <img src="/images/cart.svg" className="nav-bar-cart"/> */}
                         {/* <p className="cart-font"> Your Total: € </p> */}
-                        <Link to="/checkout" className="cart-font">your total:</Link>
-                        <p>€</p>
-                        <div className="cart-price">{props.total},00</div>
-                        <button type="button" onClick={ refreshPage } className="empty-cart-button"> <span>Empty Cart</span> </button>
+                        {/* <Link to="/checkout" className="cart-font">your total:</Link> */}
+                        {/* <p>€</p> */}
+                        {/* <div className="cart-price">{props.total},00</div> */}
+                        {/* <button type="button" onClick={ refreshPage } className="empty-cart-button"> <span>Empty Cart</span> </button> */}
                     </div>
                     <a><img src="/images/ira-logo.jpg" className="nav-bar-logo"/></a>
 
@@ -54,7 +55,7 @@ import { connect } from 'react-redux';
                     <Link to="/" className="nav-bar-font">home</Link>
                     <Link to="/about" className="nav-bar-font">about</Link>
                     <Link to="/portfolio" className="nav-bar-font">portfolio</Link>
-                    <Link to="/shop" className="nav-bar-font">shop</Link>
+                    <Link to="/contact" className="nav-bar-font">contact</Link>
                 </div>
 
 

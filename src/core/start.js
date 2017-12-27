@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import Individualshop from '../cart/individualshop';
 import Uber from '../de/uber.js';
 import Checkout from '../cart/checkout';
+import Contact from './contact';
 
 // import Testcontact from './testcontact';
 
@@ -34,6 +35,7 @@ let mainRouter;
                     <Route path="/individualshop/:id" component={Individualshop} />
                     <Route path="/uber" component={Uber} />
                     <Route path="/checkout" component={Checkout} />
+                    <Route path="/contact" component={Contact} />
 
             </Route>
         </Router>

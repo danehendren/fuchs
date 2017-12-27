@@ -26,7 +26,8 @@ export default class Home extends React.Component {
             <div>
                 <Navi />
                 {this.props.children}
-                <Contact />
+
+                {/* <Contact /> */}
             </div>
         )
     }
