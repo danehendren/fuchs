@@ -1,16 +1,19 @@
 const spicedPg = require("spiced-pg");
-var dbURL;
+var config = require('../config.json');
+var amazon = config.s3Url ;
+var dbUrl ;
+
 
 if (process.env.DATABASE_URL) {
-    dbURL = process.env.DATABASE_URL
+    db = process.env.DATABASE_URL
 } else {
     var info = require('../secrets.json')
     var user = info.username;
     var pass = info.password;
-    dbURL = spicedPg(`postgres:${user}:${pass}psql@localhost:5432/shopItems`);
+    db = spicedPg(`postgres:${user}:${pass}psql@localhost:5432/shop`);
 }
 
-var db = spicedPg(dbURL)
+
 
 
 

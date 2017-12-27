@@ -6,13 +6,14 @@ var dbUrl ;
 
 
 
+
 if (process.env.DATABASE_URL) {
     dbURL = process.env.DATABASE_URL
 } else {
     var info = require('./secrets.json')
     var user = info.username;
     var pass = info.password;
-    dbURL = `postgres:${user}:${pass}psql@localhost:5432/shopItems`
+    dbURL = `postgres:${user}:${pass}psql@localhost:5432/shop`
 }
 
 
