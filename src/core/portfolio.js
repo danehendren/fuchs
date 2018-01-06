@@ -18,12 +18,7 @@ export default class Portfolio extends React.Component {
                       </div>
                     </div>
 
-                    <div className="img__wrap">
-                      <a><img className="img__img" src="/portfolio/tigerxmas.jpg" className="portfolio-image"/></a>
-                      <div className="img__description_layer">
-                        <p className="img__description">Christmas Tiger</p>
-                      </div>
-                    </div>
+
 
 
                     <div className="img__wrap">
@@ -34,12 +29,7 @@ export default class Portfolio extends React.Component {
                     </div>
 
 
-                    <div className="img__wrap">
-                      <a><img className="img__img" src="/portfolio/xmastreecat.jpg" className="portfolio-image"/></a>
-                      <div className="img__description_layer">
-                        <p className="img__description">Christmas Cat</p>
-                      </div>
-                    </div>
+
 
 
                     <div className="img__wrap">
@@ -146,6 +136,13 @@ export default class Portfolio extends React.Component {
                     </div>
 
                     <div className="img__wrap">
+                      <a><img className="img__img" src="/portfolio/tigerxmas.jpg" className="portfolio-image"/></a>
+                      <div className="img__description_layer">
+                        <p className="img__description">Christmas Tiger</p>
+                      </div>
+                    </div>
+
+                    <div className="img__wrap">
                       <a><img className="img__img" src="/portfolio/flowerdog.jpg" className="portfolio-image"/></a>
                       <div className="img__description_layer">
                         <p className="img__description">French Bulldog</p>
@@ -178,6 +175,13 @@ export default class Portfolio extends React.Component {
                       <a><img className="img__img" src="/portfolio/darkcat.jpg" className="portfolio-image"/></a>
                       <div className="img__description_layer">
                         <p className="img__description">The Master and Margarita - Behemoth [cat]</p>
+                      </div>
+                    </div>
+
+                    <div className="img__wrap">
+                      <a><img className="img__img" src="/portfolio/xmastreecat.jpg" className="portfolio-image"/></a>
+                      <div className="img__description_layer">
+                        <p className="img__description">Christmas Cat</p>
                       </div>
                     </div>
 
