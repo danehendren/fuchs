@@ -7,11 +7,11 @@ export default class Contact extends React.Component {
         return (
             <div>
                 <div className="contact-container">
-                    <h3>Reach out and we can discuss any work you'd like to have done</h3>
+                    <h3>Reach out and we can discuss any work you'd like to have created!</h3>
                     <br></br>
                     <p>Artist: Irina Schäfer</p>
-                    <p>E-mail: irina@gmx.de</p>
-                    <p>Available for custom paintings | graphic design | hand drawn creations</p>
+                    <p>E-mail: irina.schaefer4@gmx.de</p>
+                    <p>Available for: custom paintings | graphic design | hand drawn creations</p>
                 </div>
 
 
