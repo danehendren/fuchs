@@ -6,10 +6,10 @@ Technologies :
   Backend: Node & Express
   Databases: Postgres SQL & Amazon Web Services S3
 
-Screenshots:
+<h1>Screenshots:</h1>
 
  <img src="/public/images/homepagefox.png" />
  <img src="/public/images/portfoliofox.png" />
  <!-- <img src="/public/images/.png" /> -->
 
- Comments: Shop is currently being put on hold and built locally.
+ <h1>Comments:</h1> <p>Shop is currently being put on hold and built locally.</p>
