@@ -10,6 +10,6 @@ Screenshots:
 
  <img src="/public/images/homepagefox.png" />
  <img src="/public/images/portfoliofox.png" />
- <img src="/public/images/shopfox.png" />
+ <!-- <img src="/public/images/.png" /> -->
 
  Comments: Shop is currently being put on hold and built locally.
