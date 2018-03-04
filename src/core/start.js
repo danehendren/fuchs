@@ -35,7 +35,7 @@ let mainRouter;
                     <Route path="/individualshop/:id" component={Individualshop} />
                     <Route path="/uber" component={Uber} />
                     <Route path="/checkout" component={Checkout} />
-                    <Route path="/contact" component={Contact} />
+                    <Route path="/contact" component={Shop} />
 
             </Route>
         </Router>
@@ -60,10 +60,6 @@ let mainRouter;
 // } else {
 //     router = germanRouter
 // }
-
-
-//
-//
 // if (location.pathname === '/home/') {
 //     console.log('About to use Main Router!');
 //     router = mainRouter
