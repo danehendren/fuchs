@@ -39,8 +39,6 @@ const cartTotal = this.props.total
                         <Link to="/about"><li className="cart-font">English</li></Link>
                         <Link to="/uber"><li className="cart-font">Deutsch</li></Link>
                     </ul>
-
-
                 </div>
 
 

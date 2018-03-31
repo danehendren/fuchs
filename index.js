@@ -28,7 +28,7 @@ if (process.env.NODE_ENV != 'production') {
     }));
 }
 
-app.use(express.static('./public'));
+app.use(express.static('./public/index.html'));
 
 
 app.get('/get-shop-products/', (req, res) => {
